@@ -2,8 +2,8 @@ using namespace std;
 
 #include <verilated.h>
 #include "verilated_vcd_c.h"
-#include "Vsimple_system.h"       //auto created by the verilator from the rtl
-#include "Vsimple_system__Dpi.h"   //auto created by the verilator from the rtl
+#include "Vsimple_system.h"
+#include "Vsimple_system__Dpi.h"
 
 #define CLK_PERIOD          10
 #define TCLK_PERIOD         40
@@ -57,13 +57,13 @@ int main(int argc,  char ** argv)
         ptTbTop->eval();
         if(m_trace)
         {
-	        m_trace->dump(m_cpu_tickcount*10);   //  Tick every 10 ns
-	    }
+	        m_trace->dump(m_cpu_tickcount*10);
+	}
         ptTbTop->clk_i = 0;	
         ptTbTop->eval();		  
         if(m_trace)
         {
-            m_trace->dump(m_cpu_tickcount*10+5);   // Trailing edge dump
+            m_trace->dump(m_cpu_tickcount*10+5);
             m_trace->flush();
         }	
         m_cpu_tickcount++;     
@@ -78,9 +78,6 @@ int main(int argc,  char ** argv)
         fflush(trace_fd);
         fclose(trace_fd);
     }
-#if VM_COVERAGE
-    VerilatedCov::write("log/coverage.dat");
-#endif // VM_COVERAGE	
     delete ptTbTop;
     exit(0);
 }
