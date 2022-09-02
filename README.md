@@ -38,6 +38,8 @@ You can run the `helloworld.vmem` program:
 
 ## System Architecture
 
+![image](https://github.com/CastoHu/SprintRV/blob/main/docs/system_arch.png)
+
 ## Update Plan
 
 1. Jtag support
