@@ -46,3 +46,11 @@ You can run the `helloworld.vmem` program:
 2. Off-chip Flash boot
 3. BSP support (I have successfully simulated on FPGA offline, but do not provide relevant steps, BSP is under development 70%)
 4. Peripheral I/O interface and related peripheral support
+
+## Results
+
+The RISCV core got 2.89 points when running on CoreMark.
+![image](https://github.com/CastoHu/SprintRV/blob/main/docs/coremark_res.png)
+```
+1000 * 1000000 / 346233059 = 2.89
+```
